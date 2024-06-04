@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning ... Coding
 - 💞️ I’m looking to collaborate on ... nothing
 - 📫 How to reach me ... 7337565395
-- 😄 Pronouns: ... 
+- 😄 Pronouns: ... ntg
 - ⚡ Fun fact: ... i'm a good boy
 
 <!---
