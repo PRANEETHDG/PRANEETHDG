@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<title>Navigation Bar </title>
+
+<link rel="icon" type="image/x-icon" href="1.jpg">
+ <style>
+    body{
+        font-family: sans-serif;
+        margin: 0;
+    }
+    header{
+        background: linear-gradient(180deg,navy,blue);
+        padding: 10px;
+        color: whitesmoke;
+        text-align: center;
+    }
+    nav{
+        background-color: aquamarine;
+        padding: 5px;
+        font-size: 14px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+    nav li a{
+        color: rgb(25, 2, 2);
+        text-decoration: none;
+        padding: 10px 25px;
+        display: inline-flex;
+    }
+    nav a:hover{
+        background-color: darkseagreen;
+        color: black;
+        border-radius: 3px;
+    }
+   nav li a.active{
+    color: red;
+   }
+   .abbr-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            border-bottom: 1px dotted black; /* Dotted underline */
+        }
+
+        .abbr-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #f9f9f9;
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .abbr-container:hover .abbr-text,
+        .abbr-container:focus .abbr-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        .category-cell {
+            background-color: #dff0d8; 
+        }
+        .name-column {
+            background-color: #f8d7da; 
+        }
+        .description-column {
+            background-color: #d1e7dd; 
+        }
+        .footer {
+            background-color: #333; 
+            color: white;
+            text-align: center; 
+            padding: 20px 0; 
+            width: 100%; 
+            bottom: 0; 
+        }
+        .footer a {
+            color: #4CAF50; 
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline; 
+            color: red;
+        }
+        #first-mailto:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        .image-map-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .image-map-container img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .image-map {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* New styles for responsive images */
+    .responsive-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+ </style>
+</head>
+<body> 
+    <header>
+        <h2>Basics of Web Development</h1> 
+    </header>
+<nav>
+    <li><a href="#Introduction" class="active" onclick="highlight(this)">Introduction</a> </li>
+    <li><a href="#HTML" onclick="highlight(this)">HTML</a> </li>
+    <li><a href="#CSS" onclick="highlight(this)">CSS</a> </li>
+    <li><a href="#Javascript" onclick="highlight(this)">Javascript</a> </li>
+</nav>
+<div style=" 
+background-color: #fffdfd;
+border: 2px solid #cecdcd;
+border-radius:2px; 
+margin: 0 auto; 
+border-radius: 10px;
+margin: 20px;
+padding: 10px;">
+<section id="Introduction">
+    <h2>Introduction</h2> <br>
+    <ol>
+        <li>Introduction
+            <ul style="list-style-type: disc;">
+                <li>Basic concepts</li>
+                <li>History of HTML</li>
+            </ul>
+        </li>
+        <li>Structure
+            <ul> <li>
+                Elements
+            </li>
+        <li>Tags</li></ul>
+        </li>
+        <li>Attributes
+            <ul style="list-style-type: square;">
+                <li>Global attributes</li>
+                <li>Specific attributes</li>
+            </ul>
+        </li>
+    </ol>
+    <p>Web development is the work involved in developing a website for the Internet or an intranet. It can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.</p>
+    <p style="border-left: 10px solid gray;padding-left:5px; background-color: rgb(226, 225, 225);height: 15px;padding: 15px;">"Web development is a broad term for the work involved in developing a web site for the Internet or an intranet."</p>
+    <p><b>Key Elements:</b> HTML, CSS, Javascript </p>
+    <a href="https://www.w3schools.com/" target="_blank"><img src="web dev.jpeg" alt="Picture"></a>
+    <p>To learn from w3schools, click above link.</p>
+    <p>Check out <a href="https://developer.mozilla.org/en-US/" target="_blank" style="color: orangered;text-decoration: none;">MDN Web Docs</a> for detailed documentaion.</p>
+    <p>Learn more at <a href="https://www.google.com" style="color: orangered;text-decoration: none;">Google.</a></p>
+    <p>Explore <a href="https://www.example.com" style="color: orangered;text-decoration: none;">Example Site.</a></p>
+</section>
+</div>
+<div style=" 
+background-color: #fffdfd;
+border: 2px solid #cecdcd;
+border-radius:2px; 
+margin: 0 auto; 
+border-radius: 10px;
+margin: 20px;
+padding: 10px;">
+<section id="HTML">
+    <h2>HTML</h2><br>
+    <p><abbr class="abbr-container" tabindex="0">HTML<span class="abbr-text">HyperText Markup Language</span></abbr> is the standard language for creating web pages. HTML describes the structure of a web page using markup. HTML elements are the building blocks of HTML pages.</p>
+    <div style="background-color: rgb(235, 232, 232); margin: 10px; border-radius: 5px;"><pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;My Webpage&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;This is an example of HTML code displayed on a webpage.&lt;/p&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre></div>
+        The <mark>&lt;mark&gt;</mark> tag highlights text, while <del>&lt;del&gt;</del> and <ins>&lt;ins&gt;</ins> tags show deleted and inserted text, respectively. <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce <span style="border: 2px solid orange;background-color: rgb(250, 196, 95);">malesuada</span> ultrices nisi, eu tempus ipsum volutpat sit amet.
+</section>
+</div>
+<div style=" 
+background-color: #fffdfd;
+border: 2px solid #cecdcd;
+border-radius:2px; 
+margin: 0 auto; 
+border-radius: 10px;
+margin: 20px;
+padding: 10px;"><section id="CSS">
+    <h2>CSS</h2> <br> <br>
+    CSS stands for <b><em>Cascading Style Sheets</em></b>. It describes how HTML elements are to be displayed on a screen,paper or in other media. CSS saves a lot of work. It can control the layout of multiple webpages all at once.
+    For any inquiries, email us at <a href="mailto:info@webdev.com" style="text-decoration: none;color: green;" id="first-mailto">info@webdev.com</a></p><br> <br>
+    <a href="https://css-tricks.com/"><img src="css.png" alt=""></a><br> <br>
+    Understanding image maps: <br> <br>
+    <section id="ImageMaps">
+        <h2>Image Maps</h2>
+        <div class="image-map-container">
+            <img src="image_maps.png" alt="Image Maps Example">
+            <map name="map1" class="image-map">
+                <area shape="rect" coords="0,0,200,200" href="https://www.example.com" alt="Example 1">
+                <area shape="circle" coords="300,300,100" href="https://www.example.com" alt="Example 2">
+                <area shape="poly" coords="400,0,500,100,450,200" href="https://www.example.com" alt="Example 3">
+            </map>
+        </div>
+    </section>
+    <section id="ResponsiveImages">
+        <h2>Responsive Images</h2>
+        <img src="y.png" alt="Responsive Image Example" class="responsive-image">
+    </section>
+</div>
+    <div style="background-image: url(4.jpg); height: 100px;"><h3 style="text-align: center;">This is random text</h3><p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit earum esse ipsum magnam debitis cumque inventore eum autem quos, <br>enim nemo quidem, laudantium quasi.  Voluptates ipsa rem rerum qui dolorem.
+    </p></div>
+    Some beautiful tables like this can be made &#x1F642; <br> <br>
+    
+    <h2>Item Details</h2>
+
+   
+    <table>
+        <tr>
+            <th rowspan="2" class="category-cell" style="background-color: #4CAF50;">Category</th>
+            <th class="header" colspan="3">Item Details</th>
+            <th rowspan="2" class="category-cell" style="background-color: #4CAF50;">Price</th>
+        </tr>
+        <tr>
+            <th class="header">Name</th>
+            <th class="header">Description</th>
+            <th class="header">Quantity</th>
+        </tr>
+        <tr>
+            <td class="category-cell" style="background-color: #4CAF50;">Electronics</td>
+            <td class="name-column">Laptop</td>
+            <td class="description-column">High performance laptop for gaming and work</td>
+            <td>1</td>
+            <td class="category-cell">$1200</td>
+        </tr>
+        <tr>
+            <td class="category-cell" style="background-color: #4CAF50;">Furniture</td>
+            <td class="name-column">Desk</td>
+            <td class="description-column">Ergonomic office desk</td>
+            <td>1</td>
+            <td class="category-cell">$250</td>
+        </tr>
+        <tr>
+            <td class="category-cell" style="background-color: #4CAF50;">Stationery</td>
+            <td class="name-column">Notebook</td>
+            <td class="description-column">A4 size, 100 pages</td>
+            <td>5</td>
+            <td class="category-cell">$15</td>
+        </tr>
+    </table>
+</section></div>
+<div style=" 
+background-color: #fffdfd;
+border: 2px solid #cecdcd;
+border-radius:2px; 
+margin: 0 auto; 
+border-radius: 10px;
+margin: 20px;
+padding: 10px;">
+<section id="Javascript">
+    <h2>JavaScript</h2>
+    JavaScript is a programming language commonly used in web development. It was originally developed by Netscape as a means to add dynamic and interactive elements to websites. JavaScript is versatile and beginner-friendly. <br>
+    <div style="background-color: rgb(235, 232, 232); margin: 10px; border-radius: 5px;"><pre><code>
+    </code></pre></div>
+    <button onclick="alert('Hello World!')">Click Me!</button> <br> <br>
+    Visit our <button onclick="window.location.href='https://www.javascript.com/'">JavaScript Website</button> for more information. <br> <br>
+    Common elements in JavaScript include <sub>subscript</sub> and <sup>superscript</sup> text. <br><br>
+    <h2>JavaScript Example</h2> <br><br>
+    <button onclick="document.getElementById('text').innerHTML='Text is changed.'">Change Text</button>
+    <p id="text">This is some changable text.</p>
+    <img src="happy.jpeg" alt="" id="image-change">
+    <button onclick="document.getElementById('image-change').src = 'happy.jpeg'">Happy</button>
+    <button onclick="document.getElementById('image-change').src = 'sad.jpeg'">Sad</button>
+</section>
+</div>
+<div class="footer">
+    <p>Contact Us:</p>
+    <p>Web Development Inc.<br>
+       123 Web Street, Web City, WB 12345<br>
+       <a href="mailto:info@webdev.com">info@webdev.com</a></p>
+    <p>&copy; 2024 Basics of Web Development</p>
+</div>
+<script>
+    function highlight(link){
+        document.querySelectorAll('nav li a').forEach(a=>
+            {a.classList.remove('active');
+    });
+    link.classList.add('active');
+    }
+    document.querySelectorAll('.abbr-container').forEach(item => {
+        item.addEventListener('click', () => {
+            const abbrText = item.querySelector('.abbr-text');
+            abbrText.style.visibility = abbrText.style.visibility === 'visible' ? 'hidden' : 'visible';
+            abbrText.style.opacity = abbrText.style.opacity === '1' ? '0' : '1';
+        });
+    });
+    document.getElementById("first-mailto").addEventListener('click',function(event){
+        document.getElementById("first-mailto").style.color = 'yellow';
+    })
+    document.getElementById("first-mailto").addEventListener('mouseover', function(event){
+    document.getElementById("first-mailto").style.color = 'red';
+    document.getElementById("first-mailto").style.textDecoration = 'underline';
+});
+
+document.getElementById("first-mailto").addEventListener('mouseout', function(event){
+    document.getElementById("first-mailto").style.color = 'green';
+    document.getElementById("first-mailto").style.textDecoration = 'none';
+});
+</script>
+</body>
+</html>
